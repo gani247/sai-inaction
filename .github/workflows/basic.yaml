@@ -1,8 +1,13 @@
 name: "basic wflow"
 run-name: "testing basic wflow"
-on: [push]
+on: [push, workflow_dispatch]
 jobs:
   basic-wflow:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hello sai"
+      - name: first echo
+        run: echo "hello sai"
+      - name: who is the actor
+        run: echo "${{ github.actor}}"
+      - name: what is the repo
+        run: echo "${{ github.repository}}"
