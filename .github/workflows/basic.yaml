@@ -1,0 +1,8 @@
+name: "basic wflow"
+run-name: "testing basic wflow"
+on: [push]
+jobs:
+  basic-wflow:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello sai"
