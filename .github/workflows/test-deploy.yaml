@@ -1,0 +1,22 @@
+name: "basic wflow"
+run-name: "testing basic wflow"
+on: [push, workflow_dispatch]
+jobs:
+  basic-wflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first echo
+        run: echo "hello sai"
+      - name: who is the actor
+        run: echo "${{ github.actor}}"
+      - name: what is the repo
+        run: echo "${{ github.repository}}"
+
+  basic-wflow-2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: ls
+        run: ls
+        
